@@ -1,0 +1,426 @@
+@import "tailwindcss";
+@import "./theme/tailwind-theme-bridge.css";
+
+:root {
+  color-scheme: dark;
+  --bg: #05060f;
+  --bg-2: #0a0d1f;
+  --ink: #e6e9f5;
+  --ink-dim: #8a90a8;
+  --pink: #ff3d7f;
+  --pink-2: #ff7aa8;
+  --cyan: #38e8ff;
+  --amber: #ffb020;
+  --emerald: #2ee6a6;
+  --violet: #8b5cf6;
+
+  /* ── AEGIS Theme Engine defaults (Guardian Rose) ──────────────────── */
+  /* Overwritten instantly at runtime by ThemeProvider — these are just */
+  /* first-paint fallbacks so there's no flash before React mounts.     */
+  --aegis-primary: #ff3d7f;
+  --aegis-primary-hover: #ff5c91;
+  --aegis-secondary: #38e8ff;
+  --aegis-accent: #ffb020;
+  --aegis-bg: #05060f;
+  --aegis-bg-alt: #0a0d1f;
+  --aegis-surface: rgba(255, 255, 255, 0.05);
+  --aegis-surface-alt: rgba(255, 255, 255, 0.08);
+  --aegis-card: rgba(255, 255, 255, 0.06);
+  --aegis-card-hover: rgba(255, 255, 255, 0.1);
+  --aegis-text-primary: #e6e9f5;
+  --aegis-text-secondary: #a7adc4;
+  --aegis-text-muted: #6b7190;
+  --aegis-border: rgba(255, 255, 255, 0.08);
+  --aegis-border-strong: rgba(255, 255, 255, 0.16);
+  --aegis-success: #2ee6a6;
+  --aegis-warning: #ffb020;
+  --aegis-danger: #ff3d7f;
+  --aegis-info: #38e8ff;
+  --aegis-gradient-primary: linear-gradient(135deg, #ff3d7f 0%, #ff7aa8 100%);
+  --aegis-gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  --aegis-gradient-hero: radial-gradient(circle at 30% 20%, rgba(255, 61, 127, 0.25), transparent 60%), radial-gradient(circle at 80% 80%, rgba(56, 232, 255, 0.18), transparent 60%);
+  --aegis-shadow-glow-primary: 0 0 0 1px rgba(255, 61, 127, 0.35), 0 10px 40px -10px rgba(255, 61, 127, 0.6);
+  --aegis-shadow-glow-secondary: 0 0 0 1px rgba(56, 232, 255, 0.35), 0 10px 40px -10px rgba(56, 232, 255, 0.55);
+  --aegis-shadow-card: 0 8px 30px -10px rgba(0, 0, 0, 0.5);
+  --aegis-chart-1: #ff3d7f;
+  --aegis-chart-2: #38e8ff;
+  --aegis-chart-3: #ffb020;
+  --aegis-chart-4: #2ee6a6;
+  --aegis-chart-5: #8b5cf6;
+  --aegis-chart-6: #ff8a3d;
+  --aegis-violet: #8b5cf6;
+  --aegis-btn-primary-bg: linear-gradient(135deg, #ff3d7f, #e11d48);
+  --aegis-btn-primary-text: #ffffff;
+  --aegis-btn-secondary-bg: rgba(255, 255, 255, 0.06);
+  --aegis-btn-secondary-text: #e6e9f5;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background: var(--aegis-bg);
+  color: var(--aegis-text-primary);
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Aurora animated background */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora::before,
+.aurora::after {
+  content: "";
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+  mix-blend-mode: screen;
+}
+
+.aurora::before {
+  top: -20vmax;
+  left: -20vmax;
+  background: radial-gradient(circle, var(--aegis-primary) 0%, transparent 60%);
+  animation: drift1 22s ease-in-out infinite alternate;
+}
+
+.aurora::after {
+  bottom: -25vmax;
+  right: -20vmax;
+  background: radial-gradient(circle, var(--aegis-secondary) 0%, transparent 60%);
+  animation: drift2 26s ease-in-out infinite alternate;
+}
+
+@keyframes drift1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(20vw, 10vh) scale(1.2);
+  }
+}
+
+@keyframes drift2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(-18vw, -12vh) scale(1.15);
+  }
+}
+
+/* Grid overlay */
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* Glass card */
+.glass {
+  background: var(--aegis-gradient-surface);
+  border: 1px solid var(--aegis-border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-radius: 18px;
+}
+
+.glass-strong {
+  background: var(--aegis-gradient-surface);
+  border: 1px solid var(--aegis-border-strong);
+  backdrop-filter: blur(22px) saturate(160%);
+  border-radius: 22px;
+}
+
+.glass-chip {
+  background: var(--aegis-surface);
+  border: 1px solid var(--aegis-border);
+  backdrop-filter: blur(14px);
+  border-radius: 999px;
+}
+
+/* Glow utilities */
+.glow-pink {
+  box-shadow: var(--aegis-shadow-glow-primary);
+}
+
+.glow-cyan {
+  box-shadow: var(--aegis-shadow-glow-secondary);
+}
+
+.glow-amber {
+  box-shadow: var(--aegis-shadow-glow-secondary);
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 24px color-mix(in srgb, var(--aegis-primary) 55%, transparent);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 24px color-mix(in srgb, var(--aegis-secondary) 55%, transparent);
+}
+
+/* Pulse rings */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  animation: pulseRing 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+/* Scanner */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(56, 232, 255, 0.9), transparent);
+  animation: scan 3.5s linear infinite;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: inline-flex;
+  gap: 2.5rem;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+}
+
+/* Gradient text */
+.text-gradient-pink {
+  background: var(--aegis-gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(90deg, var(--aegis-secondary), var(--aegis-info), var(--aegis-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255, 61, 127, 0.4), rgba(56, 232, 255, 0.4));
+  border-radius: 999px;
+}
+
+/* Map polish — dark themes (default) */
+.leaflet-container {
+  background: #0a0d1f !important;
+  border-radius: 18px;
+}
+
+.leaflet-tile {
+  filter: hue-rotate(190deg) invert(0.92) saturate(0.6) brightness(0.7);
+}
+
+.leaflet-control-zoom a {
+  background: rgba(10, 13, 31, 0.85) !important;
+  color: #e6e9f5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(10, 13, 31, 0.95);
+  color: #e6e9f5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.leaflet-popup-tip {
+  background: rgba(10, 13, 31, 0.95);
+}
+
+/* Hide leaflet attribution clutter on small */
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  color: #aaa !important;
+}
+
+/* ── Pure White theme overrides ─────────────────────────────────────── */
+[data-aegis-theme="pureWhite"] .leaflet-container {
+  background: #f0f4f8 !important;
+}
+
+[data-aegis-theme="pureWhite"] .leaflet-tile {
+  filter: none;
+}
+
+[data-aegis-theme="pureWhite"] .leaflet-control-zoom a {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(15, 23, 42, 0.15) !important;
+}
+
+[data-aegis-theme="pureWhite"] .leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.98);
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+[data-aegis-theme="pureWhite"] .leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+[data-aegis-theme="pureWhite"] .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #475569 !important;
+}
+
+/* White theme — aurora subtle */
+[data-aegis-theme="pureWhite"] .aurora::before,
+[data-aegis-theme="pureWhite"] .aurora::after {
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+}
+
+/* White theme — grid overlay lighter */
+[data-aegis-theme="pureWhite"] .grid-overlay {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+/* Blink */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0.25
+  }
+}
+
+.blink {
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0
+  }
+
+  100% {
+    background-position: 200% 0
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.2s linear infinite;
+}
+
+/* Radar */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-sweep {
+  animation: radarSweep 4s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* Number ticker */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* ── AEGIS Theme Engine: smooth cross-fade on theme switch ───────────── */
+/* Only color/shadow related properties transition — layout, spacing,    */
+/* and structure are completely untouched by the theme system.          */
+body,
+.glass,
+.glass-strong,
+.glass-chip,
+.aurora::before,
+.aurora::after {
+  transition: background-color 0.4s ease, border-color 0.4s ease,
+    box-shadow 0.4s ease, color 0.4s ease;
+}
