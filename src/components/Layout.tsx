@@ -442,9 +442,21 @@ export default function Layout() {
       <div className="grid-overlay" />
 
       <div className="relative z-10 flex">
+        {/* Mobile overlay — renders BEFORE sidebar so sidebar's z-40 sits on top */}
+        <div
+          className={`lg:hidden fixed inset-0 z-30 transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+          style={{ background: "rgba(0,0,0,0.6)" }}
+          onClick={() => setOpen(false)}
+          aria-hidden="true"
+        />
+
         {/* Sidebar */}
         <aside
-          className={`${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 fixed lg:sticky top-0 h-screen w-[260px] shrink-0 z-40 transition-transform duration-300`}
+          className={`${
+            open ? "translate-x-0" : "-translate-x-full"
+          } lg:translate-x-0 fixed lg:sticky top-0 h-screen w-[260px] shrink-0 z-40 transition-transform duration-300 ${
+            !open ? "lg:pointer-events-auto pointer-events-none" : "pointer-events-auto"
+          }`}
         >
           <div className="h-full p-5 glass-strong m-3 flex flex-col">
             <div className="flex items-center gap-3 mb-3">
@@ -630,7 +642,7 @@ export default function Layout() {
         </AnimatePresence>
       </div>
 
-      {open && <div className="lg:hidden fixed inset-0 bg-black/60 z-30" onClick={() => setOpen(false)} />}
+      {/* Overlay moved above sidebar in DOM — removed from here */
     </div>
   );
 }
