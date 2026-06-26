@@ -642,7 +642,7 @@ export default function Layout() {
         </AnimatePresence>
       </div>
 
-      {/* Overlay moved above sidebar in DOM — removed from here */
+      {/* Overlay moved above sidebar in DOM — removed from here */}
     </div>
   );
 }
