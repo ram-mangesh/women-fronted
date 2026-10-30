@@ -16,7 +16,7 @@ const userNav = [
   { to: "/app/dashboard", label: "Command Deck", icon: LayoutDashboard },
   { to: "/app/sos", label: "SOS Center", icon: Siren },
   { to: "/app/journey", label: "Safe Journey", icon: ShieldCheck },
-  { to: "/app/features", label: "12 AI Features", icon: Sparkles },
+  { to: "/app/features", label: "9 AI Features", icon: Sparkles },
   { to: "/app/tracking", label: "Live Tracking", icon: MapPinned },
   { to: "/app/heatmap", label: "Threat Heatmap", icon: Flame },
   { to: "/app/community", label: "Community Intel", icon: Users },
@@ -458,15 +458,15 @@ export default function Layout() {
             !open ? "lg:pointer-events-auto pointer-events-none" : "pointer-events-auto"
           }`}
         >
-          <div className="h-full p-5 glass-strong m-3 flex flex-col">
+          <div className="theme-sidebar h-full p-5 glass-strong m-3 flex flex-col">
             <div className="flex items-center gap-3 mb-3">
-              <div className="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 grid place-items-center glow-pink">
+              <div className="relative w-11 h-11 rounded-2xl grid place-items-center glow-pink" style={{ background: "var(--aegis-gradient-primary)" }}>
                 <Shield className="w-6 h-6 text-white" />
-                <span className="absolute inset-0 rounded-2xl ring-2 ring-pink-400/40 pulse-ring text-pink-300" />
+                <span className="absolute inset-0 rounded-2xl ring-2 pulse-ring" style={{ color: "var(--sidebar-accent)", borderColor: "var(--sidebar-border)" }} />
               </div>
               <div>
-                <div className="text-lg font-bold tracking-wide" style={{ color: "var(--aegis-text-primary)" }}>AEGIS</div>
-                <div className="text-[11px] -mt-0.5" style={{ color: "var(--aegis-text-secondary)" }}>AI Safety Intelligence</div>
+                <div className="sidebar-title text-lg font-bold tracking-wide">Vasudra</div>
+                <div className="sidebar-muted text-[10px] -mt-0.5 leading-tight">AI Women &amp; Child Safety Intelligence</div>
               </div>
             </div>
 
@@ -493,9 +493,9 @@ export default function Layout() {
                   to={n.to}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `group relative flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm transition ${isActive
-                      ? "bg-gradient-to-r from-pink-500/20 to-cyan-500/10 text-white border border-pink-400/30"
-                      : "text-slate-400 hover:text-white hover:bg-white/5 border border-transparent"
+                    `group relative flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm border transition ${isActive
+                      ? "sidebar-nav-active"
+                      : "sidebar-nav-item border-transparent"
                     }`
                   }
                 >
@@ -506,7 +506,8 @@ export default function Layout() {
                       {isActive && (
                         <motion.span
                           layoutId="navdot"
-                          className="ml-auto w-1.5 h-1.5 rounded-full bg-pink-400 shadow-[0_0_12px_2px_rgba(255,61,127,0.8)]"
+                          className="ml-auto w-1.5 h-1.5 rounded-full"
+                          style={{ background: "var(--sidebar-accent)", boxShadow: "0 0 12px 2px color-mix(in srgb, var(--sidebar-accent) 65%, transparent)" }}
                         />
                       )}
                     </>

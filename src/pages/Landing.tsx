@@ -26,7 +26,7 @@ const stats = [
 
 export default function Landing() {
   return (
-    <div className="relative min-h-screen">
+    <div className="landing-page relative min-h-screen">
       <div className="aurora" />
       <div className="grid-overlay" />
 
@@ -37,8 +37,8 @@ export default function Landing() {
             <Shield className="w-5 h-5 text-white" />
           </div>
           <div>
-            <div className="text-lg font-bold tracking-wider">AEGIS</div>
-            <div className="text-[10px] text-slate-400 -mt-0.5">AI Women Safety Intelligence</div>
+            <div className="text-lg font-bold tracking-wider">Vasudra</div>
+            <div className="text-[10px] text-slate-400 -mt-0.5">AI Women &amp; Child Safety Intelligence</div>
           </div>
         </div>
         <div className="hidden md:flex items-center gap-7 text-sm text-slate-300">
@@ -83,7 +83,7 @@ export default function Landing() {
               transition={{ duration: 1, delay: 0.4 }}
               className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed"
             >
-              AEGIS is a <span className="text-white font-semibold">proactive AI safety ecosystem</span> for women — fusing real-time threat intelligence, voice emotion AI, predictive navigation, and automated emergency escalation into a single hackathon-winning platform.
+              Vasudra is a <span className="text-white font-semibold">proactive AI safety ecosystem</span> for women and children — fusing real-time threat intelligence, voice emotion AI, predictive navigation, and automated emergency escalation into a single hackathon-winning platform.
             </motion.p>
 
             <motion.div
@@ -280,7 +280,7 @@ export default function Landing() {
       </section>
 
       <footer className="relative z-10 px-6 lg:px-12 py-10 border-t border-white/5 text-xs text-slate-500 flex flex-col sm:flex-row justify-between gap-3">
-        <div>© 2026 AEGIS • AI Women Safety Intelligence Platform</div>
+        <div>© 2026 Vasudra • AI Women &amp; Child Safety Intelligence Platform</div>
         <div className="flex gap-4">
           <span>Spring Boot</span><span>FastAPI</span><span>PostgreSQL</span><span>Twilio</span><span>Google Maps</span>
         </div>

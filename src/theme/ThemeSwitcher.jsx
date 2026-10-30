@@ -127,7 +127,7 @@ function ThemeSwitcherFull() {
         </h3>
       </div>
       <p className="text-xs mb-4" style={{ color: "var(--aegis-text-secondary)" }}>
-        Choose a theme for the whole AEGIS interface. Applies instantly across dashboards, maps, and charts.
+        Choose a theme for the whole Vasudra interface. Applies instantly across dashboards, maps, and charts.
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">

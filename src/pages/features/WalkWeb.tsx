@@ -194,7 +194,7 @@ export default function WalkWeb() {
                     )}
                   </div>
                   <div className="flex-1">
-                    <div className="font-bold">AEGIS Companion</div>
+                    <div className="font-bold">Vasudra Companion</div>
                     <div className={`text-[11px] ${speaking ? "text-emerald-300" : "text-slate-400"}`}>
                       {speaking ? "● Speaking..." : "○ Listening"}
                     </div>

@@ -241,7 +241,7 @@ export default function VoiceCodeWeb() {
           <div className="text-[11px] uppercase tracking-[0.3em] text-pink-300">Stealth Trigger</div>
           <h1 className="text-3xl font-black">Voice Secret Code</h1>
           <p className="text-slate-400 text-sm mt-1">
-            Say "Call Mom" — AEGIS silently triggers SOS. Attacker never knows.
+            Say "Call Mom" — Vasudra silently triggers SOS. Attacker never knows.
           </p>
         </div>
       </div>

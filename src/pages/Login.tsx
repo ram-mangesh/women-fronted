@@ -55,7 +55,7 @@ export default function Login() {
   };
 
   return (
-    <div className="relative min-h-screen grid lg:grid-cols-2">
+    <div className="login-page relative min-h-screen grid lg:grid-cols-2">
       <div className="aurora" />
       <div className="grid-overlay" />
 
@@ -66,8 +66,8 @@ export default function Login() {
             <Shield className="w-6 h-6 text-white" />
           </div>
           <div>
-            <div className="text-xl font-bold tracking-wide">AEGIS</div>
-            <div className="text-[11px] text-slate-400 -mt-0.5">AI Women Safety Intelligence</div>
+            <div className="text-xl font-bold tracking-wide">Vasudra</div>
+            <div className="text-[11px] text-slate-400 -mt-0.5">AI Women &amp; Child Safety Intelligence</div>
           </div>
         </div>
 
@@ -108,8 +108,8 @@ export default function Login() {
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div>
-              <div className="text-xl font-bold">AEGIS</div>
-              <div className="text-[11px] text-slate-400">AI Safety Intelligence</div>
+              <div className="text-xl font-bold">Vasudra</div>
+              <div className="text-[11px] text-slate-400">AI Women &amp; Child Safety Intelligence</div>
             </div>
           </div>
 
@@ -190,7 +190,7 @@ export default function Login() {
 
           <div className="mt-5 text-center">
             <Link to="/register" className="inline-flex items-center gap-2 text-sm text-pink-300 hover:text-pink-200 font-semibold">
-              New to AEGIS? Create your account <ArrowRight className="w-4 h-4" />
+              New to Vasudra? Create your account <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           <p className="text-center text-[11px] text-slate-500 mt-4">
@@ -412,7 +412,7 @@ function SignUpForm(props: {
               <input
                 value={adminCode}
                 onChange={(e) => { setAdminCode(e.target.value); if (adminCodeError) props.adminCodeError; }}
-                placeholder="Provided by AEGIS ops team"
+                placeholder="Provided by Vasudra ops team"
                 className={`w-full glass px-4 py-2.5 rounded-xl text-sm outline-none border ${
                   adminCodeError ? "border-pink-400/60" : "border-transparent focus:border-amber-400/40"
                 }`}

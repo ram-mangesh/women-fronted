@@ -231,7 +231,7 @@ export default function BystanderWeb() {
                 </div>
                 <div className="text-xl font-bold mb-2">You're Not Alone</div>
                 <p className="text-sm text-slate-400 mb-6 max-w-md mx-auto">
-                  In emergencies, nearby AEGIS users can be your fastest help. Activate the beacon to alert verified helpers within 500m.
+                  In emergencies, nearby Vasudra users can be your fastest help. Activate the beacon to alert verified helpers within 500m.
                 </p>
                 <button
                   onClick={activateBeacon}
@@ -398,7 +398,7 @@ export default function BystanderWeb() {
               <span className="text-sm font-bold">Safety Guarantee</span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              All responders are verified AEGIS users. Identity protected until they respond. Every interaction is logged for accountability.
+              All responders are verified Vasudra users. Identity protected until they respond. Every interaction is logged for accountability.
             </p>
           </Card>
         </div>

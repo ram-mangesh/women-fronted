@@ -401,7 +401,7 @@ export default function LiveTracking() {
             {!isJourneyActive ? (
               <div className="space-y-3">
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Start a monitored safe journey. Aegis will track your route, verify heartbeats, and alert your guardians if you miss checkpoints.
+                  Start a monitored safe journey. Vasudra will track your route, verify heartbeats, and alert your guardians if you miss checkpoints.
                 </p>
                 <div className="space-y-2 text-xs">
                   <div>

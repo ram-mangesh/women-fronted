@@ -43,6 +43,8 @@ function applyThemeToDocument(themeKey) {
   Object.entries(vars).forEach(([prop, value]) => {
     root.style.setProperty(prop, value);
   });
+  const lightThemes = ["atlasBisque", "oliveCream", "tealBeige", "pureWhite"];
+  root.style.colorScheme = lightThemes.includes(themeKey) ? "light" : "dark";
   // Also expose the active theme key as a data-attribute, useful for
   // any CSS that wants to do theme-specific overrides without JS.
   root.setAttribute("data-aegis-theme", themeKey);

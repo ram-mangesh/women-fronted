@@ -1,17 +1,18 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export function StatCard({
   label, value, hint, icon, tone = "cyan",
 }: { label: string; value: ReactNode; hint?: string; icon?: ReactNode; tone?: "pink" | "cyan" | "amber" | "emerald" | "violet" }) {
   const tones: Record<string, string> = {
-    pink: "from-pink-500/20 to-rose-500/5 border-pink-400/20 text-pink-300",
-    cyan: "from-cyan-500/20 to-sky-500/5 border-cyan-400/20 text-cyan-300",
-    amber: "from-amber-500/20 to-orange-500/5 border-amber-400/20 text-amber-300",
-    emerald: "from-emerald-500/20 to-teal-500/5 border-emerald-400/20 text-emerald-300",
-    violet: "from-violet-500/20 to-fuchsia-500/5 border-violet-400/20 text-violet-300",
+    pink: "var(--aegis-primary)",
+    cyan: "var(--aegis-accent)",
+    amber: "var(--aegis-warning)",
+    emerald: "var(--aegis-secondary)",
+    violet: "var(--aegis-violet)",
   };
+  const toneColor = tones[tone];
   return (
-    <div className={`glass relative overflow-hidden p-5 rounded-2xl bg-gradient-to-br ${tones[tone]}`}>
+    <div className="glass relative overflow-hidden p-5 rounded-2xl" style={{ color: toneColor, borderColor: `color-mix(in srgb, ${toneColor} 28%, transparent)`, background: `linear-gradient(135deg, color-mix(in srgb, ${toneColor} 14%, var(--aegis-card)), var(--aegis-card))` }}>
       <div className="flex items-start justify-between">
         <div>
           <div className="text-[11px] uppercase tracking-widest" style={{ color: "var(--aegis-text-secondary)" }}>{label}</div>
@@ -20,7 +21,7 @@ export function StatCard({
         </div>
         {icon && <div className="opacity-80">{icon}</div>}
       </div>
-      <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full bg-white/5 blur-2xl" />
+      <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full blur-2xl" style={{ background: `color-mix(in srgb, ${toneColor} 10%, transparent)` }} />
     </div>
   );
 }
@@ -52,13 +53,13 @@ export function Card({ children, glow, className = "" }: { children: ReactNode; 
 }
 
 export function Pill({ children, tone = "slate" }: { children: ReactNode; tone?: "pink" | "cyan" | "amber" | "emerald" | "violet" | "slate" }) {
-  const tones: Record<string, string> = {
-    pink: "text-pink-300 bg-pink-500/15 border-pink-400/30",
-    cyan: "text-cyan-300 bg-cyan-500/15 border-cyan-400/30",
-    amber: "text-amber-300 bg-amber-500/15 border-amber-400/30",
-    emerald: "text-emerald-300 bg-emerald-500/15 border-emerald-400/30",
-    violet: "text-violet-300 bg-violet-500/15 border-violet-400/30",
-    slate: "bg-white/5 border-white/10",
+  const tones: Record<string, CSSProperties> = {
+    pink: { color: "var(--aegis-primary)", background: "color-mix(in srgb, var(--aegis-primary) 12%, transparent)", borderColor: "color-mix(in srgb, var(--aegis-primary) 32%, transparent)" },
+    cyan: { color: "var(--aegis-accent)", background: "color-mix(in srgb, var(--aegis-accent) 12%, transparent)", borderColor: "color-mix(in srgb, var(--aegis-accent) 32%, transparent)" },
+    amber: { color: "var(--aegis-warning)", background: "color-mix(in srgb, var(--aegis-warning) 12%, transparent)", borderColor: "color-mix(in srgb, var(--aegis-warning) 32%, transparent)" },
+    emerald: { color: "var(--aegis-secondary)", background: "color-mix(in srgb, var(--aegis-secondary) 12%, transparent)", borderColor: "color-mix(in srgb, var(--aegis-secondary) 32%, transparent)" },
+    violet: { color: "var(--aegis-violet)", background: "color-mix(in srgb, var(--aegis-violet) 12%, transparent)", borderColor: "color-mix(in srgb, var(--aegis-violet) 32%, transparent)" },
+    slate: { color: "var(--aegis-text-secondary)", background: "var(--aegis-surface)", borderColor: "var(--aegis-border)" },
   };
-  return <span className={`inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full border ${tones[tone]}`} style={tone === "slate" ? { color: "var(--aegis-text-secondary)", borderColor: "var(--aegis-border)" } : {}}>{children}</span>;
+  return <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-1 rounded-full border" style={tones[tone]}>{children}</span>;
 }

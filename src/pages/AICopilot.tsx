@@ -73,7 +73,7 @@ export default function AICopilot() {
   const [messages, setMessages] = useState<Msg[]>([
     {
       role: "ai",
-      text: `Hi ${userName} — I'm AEGIS Copilot. I'm monitoring your location at ${currentLocation.area}. Your live threat score is ${riskScore}/100 (${riskLevel}). Acquiring GPS for real-time help finder…`,
+      text: `Hi ${userName} — I'm Vasudra Copilot. I'm monitoring your location at ${currentLocation.area}. Your live threat score is ${riskScore}/100 (${riskLevel}). Acquiring GPS for real-time help finder…`,
       t: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
   ]);
@@ -93,8 +93,8 @@ export default function AICopilot() {
       updated[0] = {
         ...updated[0],
         text: gps
-          ? `Hi ${userName} — I'm AEGIS Copilot. 📍 GPS acquired (${gps.lat.toFixed(4)}, ${gps.lng.toFixed(4)}). Your live threat score is ${riskScore}/100 (${riskLevel}). I can now find real police stations, shelters, and hospitals near you. How can I help?`
-          : `Hi ${userName} — I'm AEGIS Copilot. GPS not available — using area context (${currentLocation.area}). Threat score: ${riskScore}/100 (${riskLevel}). How can I help?`,
+          ? `Hi ${userName} — I'm Vasudra Copilot. 📍 GPS acquired (${gps.lat.toFixed(4)}, ${gps.lng.toFixed(4)}). Your live threat score is ${riskScore}/100 (${riskLevel}). I can now find real police stations, shelters, and hospitals near you. How can I help?`
+          : `Hi ${userName} — I'm Vasudra Copilot. GPS not available — using area context (${currentLocation.area}). Threat score: ${riskScore}/100 (${riskLevel}). How can I help?`,
       };
       return updated;
     });
@@ -231,7 +231,7 @@ export default function AICopilot() {
     } else if (lower.includes("defense") || lower.includes("defence") || lower.includes("self defense")) {
       setTimeout(() =>
         addAI(
-          "🥋 5 quick self-defense principles:\n\n1️⃣ Scream 'FIRE!' — attracts more attention than 'Help'\n2️⃣ Strike soft targets — eyes, throat, groin\n3️⃣ Use your elbow (strongest strike)\n4️⃣ Run toward light & crowds immediately\n5️⃣ Trigger AEGIS SOS — shake phone 3× or say 'Aegis Help'\n\nIf grabbed: stomp on foot, headbutt back, and bite if necessary. Your safety > any social rule.",
+          "🥋 5 quick self-defense principles:\n\n1️⃣ Scream 'FIRE!' — attracts more attention than 'Help'\n2️⃣ Strike soft targets — eyes, throat, groin\n3️⃣ Use your elbow (strongest strike)\n4️⃣ Run toward light & crowds immediately\n5️⃣ Trigger Vasudra SOS — shake phone 3× or say 'Vasudra Help'\n\nIf grabbed: stomp on foot, headbutt back, and bite if necessary. Your safety > any social rule.",
           [{ label: "Trigger SOS", icon: Siren, tone: "pink" }]
         ), 700
       );
@@ -289,7 +289,7 @@ export default function AICopilot() {
               <Bot className="w-5 h-5" />
             </div>
             <div className="flex-1">
-              <div className="font-bold">AEGIS Copilot</div>
+              <div className="font-bold">Vasudra Copilot</div>
               <div className="text-[11px] text-emerald-300 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 blink" />
                 Online • {gps ? "Live GPS" : "Context-aware"}

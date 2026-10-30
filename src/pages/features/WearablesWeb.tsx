@@ -10,11 +10,13 @@ import { Card, Pill } from "../../components/ui";
 import { aiServicesApi } from "../../api/endpoints";
 
 const DEVICES = [
+  /*
   { id: "nimb", name: "Nimb Ring", icon: "💍", desc: "Press button for silent SOS", category: "Ring" },
   { id: "invisawear", name: "Invisawear Necklace", icon: "📿", desc: "Double-press pendant", category: "Jewelry" },
   { id: "apple", name: "Apple Watch", icon: "⌚", desc: "Hold side button 3s", category: "Watch" },
   { id: "fitbit", name: "Fitbit Sense", icon: "⌚", desc: "Triple-tap screen", category: "Watch" },
   { id: "garmin", name: "Garmin Venu", icon: "⌚", desc: "Long press button", category: "Watch" },
+  */
   { id: "safetyband", name: "Silent Beacon Band", icon: "⌚", desc: "Squeeze band", category: "Wristband" },
 ];
 
@@ -111,7 +113,7 @@ export default function WearablesWeb() {
         </Link>
         <div>
           <div className="text-[11px] uppercase tracking-[0.3em] text-amber-300">Wearables</div>
-          <h1 className="text-3xl font-black">Smart Jewelry Hub</h1>
+          <h1 className="text-3xl font-black">Child Safety Hub</h1>
           <p className="text-slate-400 text-sm mt-1">Unified control for safety wearables</p>
         </div>
       </div>

@@ -2,57 +2,57 @@
 @import "./theme/tailwind-theme-bridge.css";
 
 :root {
-  color-scheme: dark;
-  --bg: #05060f;
-  --bg-2: #0a0d1f;
-  --ink: #e6e9f5;
-  --ink-dim: #8a90a8;
-  --pink: #ff3d7f;
-  --pink-2: #ff7aa8;
-  --cyan: #38e8ff;
-  --amber: #ffb020;
-  --emerald: #2ee6a6;
-  --violet: #8b5cf6;
+  color-scheme: light;
+  --bg: #FEE3C5;
+  --bg-2: #FFF3D5;
+  --ink: #2B1720;
+  --ink-dim: #57454A;
+  --pink: #82193A;
+  --pink-2: #68142E;
+  --cyan: #008080;
+  --amber: #A85D00;
+  --emerald: #4D6946;
+  --violet: #6D4C7D;
 
-  /* ── AEGIS Theme Engine defaults (Guardian Rose) ──────────────────── */
+  /* ── AEGIS Theme Engine defaults (Palette 3 · Teal Beige) ─────────── */
   /* Overwritten instantly at runtime by ThemeProvider — these are just */
   /* first-paint fallbacks so there's no flash before React mounts.     */
-  --aegis-primary: #ff3d7f;
-  --aegis-primary-hover: #ff5c91;
-  --aegis-secondary: #38e8ff;
-  --aegis-accent: #ffb020;
-  --aegis-bg: #05060f;
-  --aegis-bg-alt: #0a0d1f;
-  --aegis-surface: rgba(255, 255, 255, 0.05);
-  --aegis-surface-alt: rgba(255, 255, 255, 0.08);
-  --aegis-card: rgba(255, 255, 255, 0.06);
-  --aegis-card-hover: rgba(255, 255, 255, 0.1);
-  --aegis-text-primary: #e6e9f5;
-  --aegis-text-secondary: #a7adc4;
-  --aegis-text-muted: #6b7190;
-  --aegis-border: rgba(255, 255, 255, 0.08);
-  --aegis-border-strong: rgba(255, 255, 255, 0.16);
-  --aegis-success: #2ee6a6;
-  --aegis-warning: #ffb020;
-  --aegis-danger: #ff3d7f;
-  --aegis-info: #38e8ff;
-  --aegis-gradient-primary: linear-gradient(135deg, #ff3d7f 0%, #ff7aa8 100%);
-  --aegis-gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-  --aegis-gradient-hero: radial-gradient(circle at 30% 20%, rgba(255, 61, 127, 0.25), transparent 60%), radial-gradient(circle at 80% 80%, rgba(56, 232, 255, 0.18), transparent 60%);
-  --aegis-shadow-glow-primary: 0 0 0 1px rgba(255, 61, 127, 0.35), 0 10px 40px -10px rgba(255, 61, 127, 0.6);
-  --aegis-shadow-glow-secondary: 0 0 0 1px rgba(56, 232, 255, 0.35), 0 10px 40px -10px rgba(56, 232, 255, 0.55);
-  --aegis-shadow-card: 0 8px 30px -10px rgba(0, 0, 0, 0.5);
-  --aegis-chart-1: #ff3d7f;
-  --aegis-chart-2: #38e8ff;
-  --aegis-chart-3: #ffb020;
-  --aegis-chart-4: #2ee6a6;
-  --aegis-chart-5: #8b5cf6;
-  --aegis-chart-6: #ff8a3d;
-  --aegis-violet: #8b5cf6;
-  --aegis-btn-primary-bg: linear-gradient(135deg, #ff3d7f, #e11d48);
-  --aegis-btn-primary-text: #ffffff;
-  --aegis-btn-secondary-bg: rgba(255, 255, 255, 0.06);
-  --aegis-btn-secondary-text: #e6e9f5;
+  --aegis-primary: #008080;
+  --aegis-primary-hover: #006666;
+  --aegis-secondary: #297F72;
+  --aegis-accent: #82193A;
+  --aegis-bg: #F5F5DC;
+  --aegis-bg-alt: #ECECD0;
+  --aegis-surface: #FFFFF0;
+  --aegis-surface-alt: rgba(236, 236, 208, 0.94);
+  --aegis-card: rgba(255, 255, 240, 0.95);
+  --aegis-card-hover: #ECECD0;
+  --aegis-text-primary: #173635;
+  --aegis-text-secondary: #456260;
+  --aegis-text-muted: #70817F;
+  --aegis-border: rgba(0, 128, 128, 0.18);
+  --aegis-border-strong: rgba(0, 128, 128, 0.36);
+  --aegis-success: #39705B;
+  --aegis-warning: #A56A1D;
+  --aegis-danger: #A83246;
+  --aegis-info: #008080;
+  --aegis-gradient-primary: linear-gradient(135deg, #008080 0%, #006666 100%);
+  --aegis-gradient-surface: linear-gradient(180deg, rgba(255, 255, 240, 0.97), rgba(245, 245, 220, 0.90));
+  --aegis-gradient-hero: radial-gradient(circle at 30% 20%, rgba(0, 128, 128, 0.17), transparent 60%), radial-gradient(circle at 80% 80%, rgba(41, 127, 114, 0.13), transparent 60%);
+  --aegis-shadow-glow-primary: 0 0 0 1px rgba(0, 128, 128, 0.26), 0 10px 40px -10px rgba(0, 128, 128, 0.38);
+  --aegis-shadow-glow-secondary: 0 0 0 1px rgba(41, 127, 114, 0.22), 0 10px 40px -10px rgba(41, 127, 114, 0.30);
+  --aegis-shadow-card: 0 8px 28px -12px rgba(28, 74, 70, 0.24);
+  --aegis-chart-1: #008080;
+  --aegis-chart-2: #297F72;
+  --aegis-chart-3: #82193A;
+  --aegis-chart-4: #A56A1D;
+  --aegis-chart-5: #557A95;
+  --aegis-chart-6: #A83246;
+  --aegis-violet: #557A95;
+  --aegis-btn-primary-bg: linear-gradient(135deg, #008080, #006666);
+  --aegis-btn-primary-text: #FFFFFF;
+  --aegis-btn-secondary-bg: #FFFFF0;
+  --aegis-btn-secondary-text: #173635;
 }
 
 html,
@@ -131,13 +131,105 @@ body,
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--aegis-text-primary) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--aegis-text-primary) 5%, transparent) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
 }
 
 /* Glass card */
+.theme-sidebar {
+  --sidebar-bg: color-mix(in srgb, var(--aegis-primary) 90%, #170b10);
+  --sidebar-bg-soft: color-mix(in srgb, var(--aegis-primary) 74%, #241116);
+  --sidebar-text: #fffaf5;
+  --sidebar-muted: rgba(255, 250, 245, 0.7);
+  --sidebar-accent: color-mix(in srgb, var(--aegis-accent) 68%, #ffffff);
+  --sidebar-border: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, var(--sidebar-bg), var(--sidebar-bg-soft));
+  border-color: var(--sidebar-border);
+  box-shadow: 0 18px 50px -18px color-mix(in srgb, var(--aegis-primary) 58%, transparent);
+}
+
+.sidebar-title {
+  color: #000000;
+}
+
+.sidebar-muted {
+  color: var(--sidebar-muted);
+}
+
+/* Light themes: sidebar surface is light — keep muted sidebar text readable in black */
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) .theme-sidebar {
+  --sidebar-muted: #000000;
+}
+
+/* Palette 3 (Teal Beige): force every sidebar label/feature to black */
+[data-aegis-theme="tealBeige"] .theme-sidebar :is(div, span, button, a, p, h1, h2, h3, h4, kbd):not(svg) {
+  color: #000000 !important;
+}
+
+/* Light palettes: dashboard + feature copy readable in black */
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) main :is(.text-slate-200, .text-slate-300, .text-slate-400, .text-slate-500, .text-slate-600) {
+  color: #000000 !important;
+}
+
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) main :is(.glass, .glass-strong, .glass-chip) :is(.text-white):not(svg):not(button) {
+  color: #000000 !important;
+}
+
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) main :is(input, textarea, select) {
+  color: #000000 !important;
+}
+
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) main :is(input, textarea)::placeholder {
+  color: #000000 !important;
+  opacity: 0.55;
+}
+
+/* Landing page (light palettes): all copy in black */
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) .landing-page :is(div, span, p, h1, h2, h3, h4, h5, h6, a, button, strong, em, small, li, label):not(svg) {
+  color: #000000 !important;
+}
+
+/* Login page (light palettes): all copy + fields in black */
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) .login-page :is(div, span, p, h1, h2, h3, h4, h5, h6, a, button, strong, em, small, li, label, code):not(svg) {
+  color: #000000 !important;
+}
+
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) .login-page :is(input, textarea, select) {
+  color: #000000 !important;
+}
+
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"], [data-aegis-theme="pureWhite"]) .login-page :is(input, textarea)::placeholder {
+  color: #000000 !important;
+  opacity: 0.55;
+}
+
+.sidebar-nav-item,
+.sidebar-nav-active,
+.sidebar-nav-item:hover {
+  color: #000000;
+}
+
+.sidebar-nav-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-nav-active {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.18), color-mix(in srgb, var(--sidebar-accent) 18%, transparent));
+  border-color: var(--sidebar-border);
+}
+
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .theme-sidebar .glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--sidebar-border);
+}
+
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .theme-sidebar .glass,
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .theme-sidebar .glass * {
+  color: var(--sidebar-muted);
+}
+
 .glass {
   background: var(--aegis-gradient-surface);
   border: 1px solid var(--aegis-border);
@@ -218,7 +310,7 @@ body,
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(56, 232, 255, 0.9), transparent);
+  background: linear-gradient(90deg, transparent, var(--aegis-accent), transparent);
   animation: scan 3.5s linear infinite;
 }
 
@@ -266,7 +358,7 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(255, 61, 127, 0.4), rgba(56, 232, 255, 0.4));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--aegis-primary) 60%, transparent), color-mix(in srgb, var(--aegis-accent) 60%, transparent));
   border-radius: 999px;
 }
 
@@ -304,44 +396,53 @@ body,
   color: #aaa !important;
 }
 
-/* ── Pure White theme overrides ─────────────────────────────────────── */
+/* ── Light theme overrides ──────────────────────────────────────────── */
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .leaflet-container,
 [data-aegis-theme="pureWhite"] .leaflet-container {
   background: #f0f4f8 !important;
 }
 
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .leaflet-tile,
 [data-aegis-theme="pureWhite"] .leaflet-tile {
   filter: none;
 }
 
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .leaflet-control-zoom a,
 [data-aegis-theme="pureWhite"] .leaflet-control-zoom a {
   background: rgba(255, 255, 255, 0.95) !important;
   color: #0f172a !important;
   border: 1px solid rgba(15, 23, 42, 0.15) !important;
 }
 
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .leaflet-popup-content-wrapper,
 [data-aegis-theme="pureWhite"] .leaflet-popup-content-wrapper {
   background: rgba(255, 255, 255, 0.98);
   color: #0f172a;
   border: 1px solid rgba(15, 23, 42, 0.12);
 }
 
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .leaflet-popup-tip,
 [data-aegis-theme="pureWhite"] .leaflet-popup-tip {
   background: rgba(255, 255, 255, 0.98);
 }
 
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .leaflet-control-attribution,
 [data-aegis-theme="pureWhite"] .leaflet-control-attribution {
   background: rgba(255, 255, 255, 0.7) !important;
   color: #475569 !important;
 }
 
-/* White theme — aurora subtle */
+/* Light themes — aurora subtle */
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .aurora::before,
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .aurora::after,
 [data-aegis-theme="pureWhite"] .aurora::before,
 [data-aegis-theme="pureWhite"] .aurora::after {
   opacity: 0.08;
   mix-blend-mode: multiply;
 }
 
-/* White theme — grid overlay lighter */
+/* Light themes — grid overlay lighter */
+:is([data-aegis-theme="atlasBisque"], [data-aegis-theme="oliveCream"], [data-aegis-theme="tealBeige"]) .grid-overlay,
 [data-aegis-theme="pureWhite"] .grid-overlay {
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
@@ -377,7 +478,7 @@ body,
 }
 
 .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--aegis-text-primary) 12%, transparent), transparent);
   background-size: 200% 100%;
   animation: shimmer 2.2s linear infinite;
 }

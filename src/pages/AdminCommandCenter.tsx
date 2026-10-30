@@ -288,7 +288,7 @@ export default function AdminCommandCenter() {
       </div>
 
       <div className="text-center text-[11px] text-slate-500 py-4">
-        <Command className="w-4 h-4 inline mr-1" /> AEGIS Command Center v4.2 • Pulse #{pulse}
+        <Command className="w-4 h-4 inline mr-1" /> Vasudra Command Center v4.2 • Pulse #{pulse}
       </div>
     </div>
   );

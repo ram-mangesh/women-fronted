@@ -111,7 +111,7 @@ export default function CompanionWeb() {
               <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#0a0d1f] blink" />
             </div>
             <div className="flex-1">
-              <div className="font-bold">AEGIS Companion</div>
+              <div className="font-bold">Vasudra Companion</div>
               <div className="text-[11px] text-emerald-300">● Online • Knows 127 things about you</div>
             </div>
             <Pill tone="emerald">Memory Active</Pill>

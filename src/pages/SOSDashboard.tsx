@@ -77,7 +77,7 @@ export default function SOSDashboard() {
                 </div>
                 <h2 className="text-3xl font-black mt-3 text-gradient-pink text-glow-pink">Your guardians have been alerted</h2>
                 <p className="text-slate-300 text-sm mt-2">
-                  Live GPS, hidden audio, and video recording are now streaming to your trusted circle and the AEGIS Command Center. Police escalation will begin in 90 seconds if unacknowledged.
+                  Live GPS, hidden audio, and video recording are now streaming to your trusted circle and the Vasudra Command Center. Police escalation will begin in 90 seconds if unacknowledged.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <Pill tone="pink"><Send className="w-3 h-3" /> Twilio SMS × 4</Pill>

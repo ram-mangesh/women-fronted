@@ -227,7 +227,7 @@ export default function TraumaWeb() {
               <span className="text-sm font-bold">Professional Support</span>
             </div>
             <p className="text-xs text-slate-400 mb-3">
-              Trauma-informed therapists (free for AEGIS users)
+              Trauma-informed therapists (free for Vasudra users)
             </p>
             <div className="space-y-2">
               {therapistList.map((t, i) => (

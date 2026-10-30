@@ -235,7 +235,7 @@ export default function Dashboard() {
           <div className="space-y-3">
             {[
               { tone: "pink", title: "Reroute recommended", d: "Your current route passes a flagged zone. Switch to Ring Road for +31% safety." },
-              { tone: "amber", title: "Battery-aware mode", d: "At 73% battery, AEGIS will auto-send last location if below 10%." },
+              { tone: "amber", title: "Battery-aware mode", d: "At 73% battery, Vasudra will auto-send last location if below 10%." },
               { tone: "cyan", title: "Companion nearby", d: "Your guardian Rahul is 1.8 km away and actively tracking." },
               { tone: "emerald", title: "Safe shelter ahead", d: "Verified shelter 240m to your right — 24/7 staffed." },
             ].map((m, i) => (

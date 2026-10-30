@@ -694,7 +694,7 @@ export default function PodsWeb() {
               <span className="text-sm font-bold">Invite Friends</span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Share pod code via WhatsApp, SMS, or QR. Anyone with AEGIS app can join instantly.
+              Share pod code via WhatsApp, SMS, or QR. Anyone with the Vasudra app can join instantly.
             </p>
           </Card>
         </div>

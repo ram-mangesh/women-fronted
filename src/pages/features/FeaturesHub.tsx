@@ -58,7 +58,7 @@ const FEATURES = [
     id: "bystander",
     icon: HandHeart,
     title: "Bystander Beacon",
-    desc: "Alert nearby verified AEGIS users for help",
+    desc: "Alert nearby verified Vasudra users for help",
     ai: "RandomForest Trust",
     tone: "amber",
     route: "/app/features/bystander",
@@ -86,7 +86,7 @@ const FEATURES = [
   {
     id: "wearables",
     icon: Watch,
-    title: "Smart Jewelry Hub",
+    title: "Child Safety Hub",
     desc: "Unified control for safety wearables",
     ai: "MLPClassifier Neural",
     tone: "amber",
@@ -179,14 +179,14 @@ export default function FeaturesHub() {
             <span className="text-[11px] uppercase tracking-[0.3em] text-pink-300">Next-Gen Features</span>
           </div>
           <h1 className="text-4xl lg:text-5xl font-black mb-3">
-            12 AI-Powered <span className="text-gradient-pink">Innovations</span>
+            9 AI-Powered <span className="text-gradient-pink">Innovations</span>
           </h1>
           <p className="text-slate-400 max-w-2xl text-lg">
             Industry-first safety features powered by real machine learning models.
             Every feature has working backend code — not just UI mockups.
           </p>
           <div className="flex flex-wrap gap-2 mt-5">
-            <Pill tone="pink"><Zap className="w-3 h-3" /> 14 FEATURES</Pill>
+            <Pill tone="pink"><Zap className="w-3 h-3" /> 9 FEATURES</Pill>
             <Pill tone="cyan"><Brain className="w-3 h-3" /> 6 ML MODELS</Pill>
             <Pill tone="amber"><Shield className="w-3 h-3" /> 23 ENDPOINTS</Pill>
           </div>

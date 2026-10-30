@@ -137,7 +137,7 @@ export default function MeshWeb() {
                 </div>
                 <div className="text-xl font-bold mb-2">No Signal? No Problem.</div>
                 <p className="text-sm text-slate-400 mb-6 max-w-md mx-auto">
-                  When cellular and WiFi are unavailable, AEGIS uses Bluetooth mesh to relay your SOS through nearby users until it reaches someone with internet.
+                  When cellular and WiFi are unavailable, Vasudra uses Bluetooth mesh to relay your SOS through nearby users until it reaches someone with internet.
                 </p>
                 <button
                   onClick={activateMesh}
@@ -369,7 +369,7 @@ export default function MeshWeb() {
               <span className="text-sm font-bold">Important</span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Mesh SOS requires other AEGIS users nearby. Effectiveness depends on user density. Urban areas work best.
+              Mesh SOS requires other Vasudra users nearby. Effectiveness depends on user density. Urban areas work best.
             </p>
           </Card>
         </div>

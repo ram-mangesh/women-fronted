@@ -215,7 +215,7 @@ function StartJourneyForm({ myPos }: { myPos: [number, number] | null }) {
           Start a Protected Journey
         </h1>
         <p className="text-slate-400 mt-1 text-sm">
-          Aegis will monitor your route, send heartbeats, and alert guardians if you miss checkpoints or go dark.
+          Vasudra will monitor your route, send heartbeats, and alert guardians if you miss checkpoints or go dark.
         </p>
       </div>
 

@@ -207,7 +207,7 @@ export default function Register() {
               <Shield className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="text-lg font-bold">AEGIS</div>
+              <div className="text-lg font-bold">Vasudra</div>
               <div className="text-[10px] text-slate-400 -mt-0.5">Join the safety network</div>
             </div>
           </Link>
@@ -260,7 +260,7 @@ export default function Register() {
                     <div className="inline-flex items-center gap-2 text-[11px] tracking-widest text-pink-300 uppercase mb-2">
                       <Sparkles className="w-3 h-3" /> Choose Your Role
                     </div>
-                    <h1 className="text-3xl lg:text-4xl font-black">How will you use AEGIS?</h1>
+                    <h1 className="text-3xl lg:text-4xl font-black">How will you use Vasudra?</h1>
                     <p className="text-slate-400 text-sm mt-2">Pick the role that matches your safety needs.</p>
                   </div>
 
@@ -495,7 +495,7 @@ export default function Register() {
                         </div>
                         <div className="md:col-span-2">
                           <Input icon={<KeyRound className="w-4 h-4" />} label="Admin Secret Code"
-                            placeholder="Provided by AEGIS operations team"
+                            placeholder="Provided by Vasudra operations team"
                             value={data.adminSecretCode} onChange={(v) => update("adminSecretCode", v)} error={errors.adminSecretCode} />
                           <p className="text-[11px] text-slate-500 mt-1.5">
                             💡 Demo code: <code className="text-amber-300">AEGIS-ADMIN-2026</code>
@@ -642,7 +642,7 @@ export default function Register() {
                   <label className="mt-5 flex items-start gap-3 glass p-3 rounded-xl cursor-pointer border border-white/10">
                     <input type="checkbox" defaultChecked className="mt-1" />
                     <div className="text-[11px] text-slate-400">
-                      I agree to AEGIS <span className="text-pink-300">Terms of Service</span> and <span className="text-pink-300">Privacy Policy</span>. I understand my data is encrypted with AES-256.
+                      I agree to Vasudra <span className="text-pink-300">Terms of Service</span> and <span className="text-pink-300">Privacy Policy</span>. I understand my data is encrypted with AES-256.
                     </div>
                   </label>
                 </div>
