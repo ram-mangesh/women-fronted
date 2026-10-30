@@ -167,8 +167,8 @@ export default function WearablesWeb() {
                         onClick={() => connectDevice(d.id)}
                         className={`flex-1 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1 ${
                           isConnected
-                            ? "bg-red-500/20 text-red-200 hover:bg-red-500/30"
-                            : "bg-amber-500/20 text-amber-200 hover:bg-amber-500/30"
+                            ? "bg-red-600 text-white hover:bg-red-700"
+                            : "bg-amber-600 text-white hover:bg-amber-700"
                         }`}
                       >
                         <Bluetooth className="w-3 h-3" />
@@ -185,7 +185,7 @@ export default function WearablesWeb() {
                         ) : (
                           <button
                             onClick={testGesture}
-                            className="flex-1 py-2 rounded-lg bg-pink-500/20 text-pink-200 text-xs font-semibold hover:bg-pink-500/30 flex items-center justify-center gap-1"
+                            className="flex-1 py-2 rounded-lg bg-pink-600 text-white text-xs font-semibold hover:bg-pink-700 flex items-center justify-center gap-1"
                           >
                             <AlertTriangle className="w-3 h-3" /> Test SOS
                           </button>
@@ -194,7 +194,7 @@ export default function WearablesWeb() {
                     </div>
 
                     {isConnected && (
-                      <div className="mt-2 text-[10px] text-emerald-300 flex items-center gap-1">
+                      <div className="mt-2 text-[10px] text-emerald-700 flex items-center gap-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 blink" />
                         Connected & listening
                       </div>
